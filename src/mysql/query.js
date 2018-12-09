@@ -2,7 +2,7 @@
  * @Author: 田佳茹 
  * @Date: 2018-12-08 10:45:01 
  * @Last Modified by: 田佳茹
- * @Last Modified time: 2018-12-08 10:48:32
+ * @Last Modified time: 2018-12-08 11:17:19
  */
 
 var mysql = require('mysql');
@@ -27,6 +27,7 @@ module.exports = function(sql, arr, fn) {
                 } else {
                     fn(null, result);
                 }
+                con.release();
             })
         }
     });
